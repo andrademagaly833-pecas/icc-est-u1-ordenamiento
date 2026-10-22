@@ -4,6 +4,8 @@ public class App {
         int[] original = {5, 6, 4, 1, 2, 3};
         int[] b = original.clone();
         int[] c = original.clone();
+        int[] d = original.clone();
+
 
         // Bubble Sort
         System.out.println("Bubble");
@@ -15,9 +17,17 @@ public class App {
         // Selection Sort
         System.out.println("Selection");
         Selection selection = new Selection();
+        InsertionSort insertion = new InsertionSort();
         printArreglo(c);
         selection.sort(c);
         printArreglo(c);
+        System.out.println("\n--- Selection Insertion ---\n");
+        System.out.println("Original:");
+        printArreglo(d);
+        
+        insertion.sort(d);
+        System.out.println("Ordenado Des:");
+        printArreglo(d);
     }
 
     public static void printArreglo(int[] arr) {
